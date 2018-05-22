@@ -67,7 +67,6 @@ import { HttpErrorHandlerService } from './settings/screening/services/http-erro
 /** for in memory data service
   * executed, 'npm i angular-in-memory-web-api --save', remove from packange.json if not in use.
   */
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data/in-memory-data.service';
 import { TrainerService } from '../../gambit-client/services/trainer/trainer.service';
 import { HydraTraineeService } from '../../gambit-client/services/trainee/gambit-trainee.service';
@@ -152,11 +151,7 @@ import { DeleteBatchModalComponent } from './manage/delete-batch-modal/delete-ba
 import { CannotDeleteModalComponent } from './manage/cannot-delete-modal/cannot-delete-modal.component';
 import { DeleteTraineeModalComponent } from './manage/delete-trainee-modal/delete-trainee-modal.component';
 import { CannotDeleteTraineeModalComponent } from './manage/cannot-delete-trainee-modal/cannot-delete-trainee-modal.component';
-<<<<<<< HEAD
-import { CannotDeleteModalComponent } from './manage/cannot-delete-modal/cannot-delete-modal.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-=======
 import { FinalReportComponent } from './screening/components/final-report/final-report.component';
 import { IntroductionComponent } from './screening/components/introduction/introduction.component';
 import { AnswerComponent } from './screening/components/answer/answer.component';
@@ -174,7 +169,7 @@ import { PDFService } from './services/pdf.service';
 import { ReportingService } from './services/reporting.service';
 import { CategoryService } from './services/category/category.service';
 import { NgbModalStack } from '@ng-bootstrap/ng-bootstrap/modal/modal-stack';
->>>>>>> b6aaacaf16e28f2dc83a11d7cc291128cd983187
+
 
 export const Dependencies = {
   imports: [
@@ -187,10 +182,7 @@ export const Dependencies = {
     ChartsModule,
     ReactiveFormsModule,
     SimpleNotificationsModule.forRoot(),
-<<<<<<< HEAD
-=======
     NgxPaginationModule,
->>>>>>> b6aaacaf16e28f2dc83a11d7cc291128cd983187
     BrowserAnimationsModule
   ],
   declarations: [

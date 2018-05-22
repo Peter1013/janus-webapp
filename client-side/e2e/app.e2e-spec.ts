@@ -10,11 +10,7 @@ describe('test-app App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-<<<<<<< HEAD
-    expect(page.getParagraphText()).toEqual('Assign Force');
-=======
  //   expect(page.getTitleText()).toEqual('Please Select One Of the Following Applications :');
->>>>>>> b6aaacaf16e28f2dc83a11d7cc291128cd983187
   });
 
   it('should display Assign force button', () => {
