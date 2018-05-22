@@ -122,6 +122,7 @@ import { DeleteBatchModalComponent } from './manage/delete-batch-modal/delete-ba
 import { DeleteTraineeModalComponent } from './manage/delete-trainee-modal/delete-trainee-modal.component';
 import { CannotDeleteTraineeModalComponent } from './manage/cannot-delete-trainee-modal/cannot-delete-trainee-modal.component';
 import { CannotDeleteModalComponent } from './manage/cannot-delete-modal/cannot-delete-modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 export const Dependencies = {
@@ -135,6 +136,7 @@ export const Dependencies = {
     ChartsModule,
     ReactiveFormsModule,
     SimpleNotificationsModule.forRoot(),
+    BrowserAnimationsModule
   ],
   declarations: [
     // pipes

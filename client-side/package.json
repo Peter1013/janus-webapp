@@ -77,5 +77,8 @@
     "tslint": "~5.7.0",
     "typescript": "~2.3.3"
   },
-  "optionalDependencies": {}
+  "optionalDependencies": {
+    "preci:e2e": "webdriver-manager update --versions.chrome=2.29",
+    "ci:e2e": "ng e2e --progress false --config protractor.ci.conf.js --webdriver-update false"
+  }
 }
