@@ -18,11 +18,18 @@ export class AppPage {
     e.click();
   }
 
-  clickManageBatches() {
-    // ensure that the navbar is visible by maximizing the browser
-    browser.driver.manage().window().maximize();
-    const e = element(by.css('body > div > app-root > app-janus > app-nav > nav >' +
-    'div.collapse.navbar-collapse > div > app-caliber-nav > ul > li:nth-child(2) > a'));
+  clickAssessBatchesNav() {
+    const e = element(by.xpath('/html/body/div/app-root/app-janus/app-nav/nav/div[2]/div/app-caliber-nav/ul/li[3]'));
+    e.click();
+  }
+
+  clickManageBatchesNav() {
+    const e = element(by.xpath('/html/body/div/app-root/app-janus/app-nav/nav/div[2]/div/app-caliber-nav/ul/li[2]'));
+    e.click();
+  }
+
+  clickQualityAuditNav() {
+    const e = element(by.xpath('/html/body/div/app-root/app-janus/app-nav/nav/div[2]/div/app-caliber-nav/ul/li[4]/a'));
     e.click();
   }
 }

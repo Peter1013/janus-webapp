@@ -23,8 +23,18 @@ describe('test-app Batch Management', () => {
     expect(browser.getCurrentUrl()).toContain(baseUrl + 'Caliber/home');
   });
 
-  it('should click Manage Batches button and go to Batch overview page', () => {
-    page.clickManageBatches();
+  it('should click Manage Batches Navigation button and go to Batch overview page', () => {
+    page.clickManageBatchesNav();
     expect(browser.getCurrentUrl()).toContain(baseUrl + 'Caliber/manage');
+  });
+
+  it('should click Assess Batches Navigation button and go to Batch Assessment Page', () => {
+    page.clickAssessBatchesNav();
+    expect(browser.getCurrentUrl()).toContain(baseUrl + 'Caliber/assess');
+  });
+
+  it('should click Quality Audit Navigation button and go to Quality Audit Page', () => {
+    page.clickQualityAuditNav();
+    expect(browser.getCurrentUrl()).toContain(baseUrl + 'Caliber/quality');
   });
 });
