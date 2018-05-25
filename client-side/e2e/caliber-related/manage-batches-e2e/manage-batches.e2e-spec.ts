@@ -1,3 +1,7 @@
+/**
+ * @author Bryce Charydczak | 1803-USF-MAR26 | Wezley Singleton
+ */
+
 import { AppPage } from './manage-batches.po';
 import { browser } from 'protractor';
 
