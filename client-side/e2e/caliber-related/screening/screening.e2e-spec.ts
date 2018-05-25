@@ -1,15 +1,12 @@
-import {PanelPage} from './panel.po';
-import {browser} from 'protractor';
+import { AppPage } from './screening.po';
+import { browser, element, by} from 'protractor';
 
-// const PanelPage = require('./panel.po');
-
-describe('test-app Panel', () => {
-  let page = new PanelPage();
+describe('test-app Screening', () => {
+  let page: AppPage;
   const baseUrl: String = browser.baseUrl + '/#/';
 
-
   beforeEach(() => {
-    page = new PanelPage();
+    page = new AppPage();
   });
 
   it('should launch the dashboard of Janus', () => {
@@ -22,8 +19,9 @@ describe('test-app Panel', () => {
     expect(browser.getCurrentUrl()).toContain(baseUrl + 'Caliber/home');
   });
 
-  it('should have a create panel button', () => {
-    page.clickPanelNav();
-    expect(page.getCreatePanelButton()).toBeTruthy();
+  it('should click Screening navbar button and direct to pendingScreeningsList', () => {
+    page.clickScreeningNav();
+    expect(browser.getCurrentUrl()).toContain(baseUrl + 'Caliber/screening/pendingScreeningsList');
   });
+  
 });

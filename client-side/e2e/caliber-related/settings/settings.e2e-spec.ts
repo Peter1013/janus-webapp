@@ -1,15 +1,12 @@
-import {PanelPage} from './panel.po';
-import {browser} from 'protractor';
+import { AppPage } from './settings.po';
+import { browser, element, by} from 'protractor';
 
-// const PanelPage = require('./panel.po');
-
-describe('test-app Panel', () => {
-  let page = new PanelPage();
+describe('test-app Settings', () => {
+  let page: AppPage;
   const baseUrl: String = browser.baseUrl + '/#/';
 
-
   beforeEach(() => {
-    page = new PanelPage();
+    page = new AppPage();
   });
 
   it('should launch the dashboard of Janus', () => {
@@ -21,9 +18,5 @@ describe('test-app Panel', () => {
     page.clickCaliberButton();
     expect(browser.getCurrentUrl()).toContain(baseUrl + 'Caliber/home');
   });
-
-  it('should have a create panel button', () => {
-    page.clickPanelNav();
-    expect(page.getCreatePanelButton()).toBeTruthy();
-  });
+  
 });

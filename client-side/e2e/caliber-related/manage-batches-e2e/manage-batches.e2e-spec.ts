@@ -28,6 +28,43 @@ describe('test-app Batch Management', () => {
     expect(browser.getCurrentUrl()).toContain(baseUrl + 'Caliber/manage');
   });
 
+  it('should display Training Name', () => {
+    expect(page.getTrainingName()).toEqual('Training Name');
+  });
+
+  it('should display Training Type', () => {
+    expect(page.getTrainingType()).toEqual('Training Type');
+  });
+
+  it('should display Skill Type', () => {
+    expect(page.getSkillType()).toEqual('Skill Type');
+  });
+
+  it('should display Location', () => {
+    expect(page.getLocation()).toEqual('Location');
+  });
+
+  it('should display Start Date', () => {
+    expect(page.getStartDate()).toEqual('Start Date');
+  });
+
+  it('should display End Date', () => {
+    expect(page.getEndDate()).toEqual('End Date');
+  });
+
+  it('should display Good grade', () => {
+    expect(page.getGoodGrade()).toEqual('Good Grade');
+  });
+
+  it('should display Passing Grade', () => {
+    expect(page.getPassingGrade()).toEqual('Passing Grade');
+  });
+  /*if('should click Create Batch Button and display a Batch Creation Modal', () => {
+    page.clickCreateBatch();
+    expect()
+  })
+  */
+
   it('should click Assess Batches Navigation button and go to Batch Assessment Page', () => {
     page.clickAssessBatchesNav();
     expect(browser.getCurrentUrl()).toContain(baseUrl + 'Caliber/assess');
