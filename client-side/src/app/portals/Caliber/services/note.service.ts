@@ -12,8 +12,13 @@ import { AlertsService } from './alerts.service';
 
 // entities
 import { Note } from '../entities/Note';
+<<<<<<< HEAD
 import { HydraBatch } from '../../../gambit-client/entities/HydraBatch';
 import { HydraTrainee } from '../../../gambit-client/entities/HydraTrainee';
+=======
+import { BatchGambit } from '../../../gambit-client/entities/BatchGambit';
+import { GambitTrainee } from '../../../gambit-client/entities/GambitTrainee';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 import { environment } from '../../../../environments/environment';
 
 const context = environment.note;
@@ -157,7 +162,7 @@ export class NoteService {
   *
   * spring-security: @PreAuthorize("hasAnyRole('VP', 'QC', 'TRAINER', 'STAGING','PANEL')")
   */
-  public fetchByTrainee(trainee: HydraTrainee): void {
+  public fetchByTrainee(trainee: GambitTrainee): void {
     const $trainingNotes = this.fetchTrainingNotesByTrainee(trainee);
     const $qcNotes = this.fetchQcNotesByTrainee(trainee);
     let results: Note[] = [];
@@ -176,7 +181,7 @@ export class NoteService {
   *
   * spring-security: @PreAuthorize("hasAnyRole('VP', 'QC', 'TRAINER', 'STAGING','PANEL')")
   */
-  public fetchTrainingNotesByTrainee(trainee: HydraTrainee): Observable<Note[]> {
+  public fetchTrainingNotesByTrainee(trainee: GambitTrainee): Observable<Note[]> {
     const url = context.fetchTrainingNotesByTrainee(trainee.traineeId);
 
     return this.httpClient.get<Note[]>(url);
@@ -190,7 +195,7 @@ export class NoteService {
   *
   * spring-security: @PreAuthorize("hasAnyRole('VP', 'QC', 'TRAINER', 'STAGING','PANEL')")
   */
-  public fetchQcNotesByTrainee(trainee: HydraTrainee): Observable<Note[]> {
+  public fetchQcNotesByTrainee(trainee: GambitTrainee): Observable<Note[]> {
     const url = context.fetchQcNotesByTrainee(trainee.traineeId);
 
     return this.httpClient.get<Note[]>(url);
@@ -249,7 +254,7 @@ export class NoteService {
 * @param batch: Batch
 * @param note: Note
 */
-  public getAllQCTraineeNotes(batch: HydraBatch, note: Note): void {
+  public getAllQCTraineeNotes(batch: BatchGambit, note: Note): void {
     const url = context.getAllQCTraineeNotes(batch.batchId, note.week);
 
     this.listSubject.next([]);
@@ -266,7 +271,7 @@ export class NoteService {
   * @param note: Note
  */
 
-  public findQCBatchNotes(batch: HydraBatch, note: Note): void {
+  public findQCBatchNotes(batch: BatchGambit, note: Note): void {
     const url = context.findQCBatchNotes(batch.batchId, note.week);
 
     this.listSubject.next([]);

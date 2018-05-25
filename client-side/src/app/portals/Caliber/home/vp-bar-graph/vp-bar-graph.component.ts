@@ -18,7 +18,11 @@ import { AlertsService } from '../../services/alerts.service';
 import { NoteService } from '../../services/note.service';
 import { ReportsService } from '../../services/reports.service';
 import { Observable } from 'rxjs/Observable';
+<<<<<<< HEAD
 import { HydraBatchService } from '../../../../gambit-client/services/batch/hydra-batch.service';
+=======
+import { GambitBatchService } from '../../../../gambit-client/services/batch/gambit-batch.service';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 
 @Component({
   selector: 'app-vp-bar-graph',
@@ -57,7 +61,7 @@ export class VpBarGraphComponent implements OnInit, OnDestroy {
     private http: HttpClient,
     private alertService: AlertsService,
     private vpHomeSelectorService: VpHomeSelectorService,
-    private batchService: HydraBatchService,
+    private batchService: GambitBatchService,
     private noteService: NoteService,
     private reportsService: ReportsService) { }
 

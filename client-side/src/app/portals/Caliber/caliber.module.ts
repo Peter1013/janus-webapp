@@ -1,5 +1,6 @@
 // modules
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -67,7 +68,11 @@ import { HttpErrorHandlerService } from './settings/screening/services/http-erro
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data/in-memory-data.service';
 import { TrainerService } from './services/trainer.service';
+<<<<<<< HEAD
 import { HydraTraineeService } from '../../gambit-client/services/trainee/gambit-trainee.service';
+=======
+import { GambitTraineeService } from '../../gambit-client/services/trainee/gambit-trainee.service';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 
 // N.T.
 import { ApiService } from './util/api.service';
@@ -293,7 +298,7 @@ import { CategoryService } from '../Caliber/services/category/category.service';
     BatchService,
     TrainerService,
     TraineeService,
-    HydraTraineeService,
+    GambitTraineeService,
     AssessmentService,
     RouteService,
     PanelService,

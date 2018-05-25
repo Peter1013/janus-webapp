@@ -22,6 +22,7 @@ import { TraineeTechSkillsComponent } from './portals/Caliber/reports/trainee-te
 import { HttpClientModule } from '@angular/common/http';
 import { RoleGuard } from './role-guard';
 import { CookieService } from 'ngx-cookie-service';
+<<<<<<< HEAD
 import { HydraClientModule } from './gambit-client/gambit-client.module';
 import { environment } from '../environments/environment';
 import { HydraBatchUtilService } from './services/gambit-batch-util.service';
@@ -29,6 +30,15 @@ import { HydraBatchUtilService } from './services/gambit-batch-util.service';
 // Error Alert
 import { ErrorAlertComponent } from './gambit-client/ui/error-alert/error-alert.component';
 import { HydraInterceptor } from './gambit-client/interceptors/hydra.interceptor';
+=======
+import { GambitClientModule } from './gambit-client/gambit-client.module';
+import { environment } from '../environments/environment';
+import { GambitBatchUtilService } from './services/gambit-batch-util.service';
+
+// Error Alert
+import { ErrorAlertComponent } from './gambit-client/ui/error-alert/error-alert.component';
+import { GambitInterceptor } from './gambit-client/interceptors/gambit.interceptor';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 
 import { ToastModule, ToastOptions } from 'ng2-toastr/ng2-toastr';
 import { ToastrOptions } from './gambit-client/ui/error-alert/toastr-options';
@@ -70,10 +80,15 @@ const routes: Routes = [
     RouterModule.forRoot(routes, { useHash: true }),
     ChartsModule,
     HttpClientModule,
+<<<<<<< HEAD
     HydraClientModule,
     ToastModule.forRoot(),
     BrowserAnimationsModule
     
+=======
+    GambitClientModule,
+    ToastModule.forRoot()
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
   ],
   declarations: [
     AppComponent,
@@ -85,7 +100,7 @@ const routes: Routes = [
     ChuckNorrisService,
     RoleGuard,
     CookieService,
-    HydraBatchUtilService,
+    GambitBatchUtilService,
     ErrorAlertComponent,
     LocationService,
     {provide: ToastOptions, useClass: ToastrOptions},

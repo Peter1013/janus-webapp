@@ -4,7 +4,11 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { Response } from '@angular/http/';
 import { environment } from '../../../../../environments/environment';
+<<<<<<< HEAD
 import { HydraTrainee } from '../../../../gambit-client/entities/HydraTrainee';
+=======
+import { GambitTrainee } from '../../../../gambit-client/entities/GambitTrainee';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 import { forEach } from '@angular/router/src/utils/collection';
 import { UrlService } from '../../../../gambit-client/services/urls/url.service';
 
@@ -87,7 +91,7 @@ export class AssociateService {
      * Update the given associate's status/client
      * @param ids of associates to be updated
      */
-    updateAssociate(trainee: HydraTrainee): Observable<any> {
+    updateAssociate(trainee: GambitTrainee): Observable<any> {
         return this.http.put(this.urlService.trainees.update(), trainee);
     }
 

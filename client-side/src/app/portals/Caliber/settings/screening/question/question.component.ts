@@ -31,6 +31,24 @@ import { AlertsService } from '../../../services/alerts.service';
   ]
 })
 
+<<<<<<< HEAD
+=======
+
+  /**
+   * Last modified by the Avengers
+   *
+   * unified create and update question so that it sends the
+   * same objects
+   *
+   * Alex Pich | 1803-USF-MAR26 | Wezley Singleton
+   *
+   * Danny S Chhunn | 1803-USF-MAR26 | Wezley Singleton
+   *
+   * Michael Adedigba | 1803-USF-MAR26 | Wezley Singleton
+   *
+   * Pedro De Los Reyes | 1803-USF-MAR26 | Wezley Singleton
+   */
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 export class QuestionComponent implements OnInit {
 
   constructor(private modalService: NgbModal, private fb: FormBuilder,
@@ -184,6 +202,14 @@ export class QuestionComponent implements OnInit {
    * and to see if the question has an Id already to decide whether
    * to alert the user, add a new question, or to update a current
    * question.
+   *
+   * incharge of updating and adding new question probably needs to be
+   * refactored poorly written by creators from hydra. Future sprint
+   * please refactor to seperate into two diffrent methods.
+   *
+   * Last Modifed by the Avengers set the bucketId in the question model
+   * so that it did not need to be passed individually to the question
+   * service.
    **/
   addNewQuestion() {
     this.tagsService.getAllTags().subscribe(data => {

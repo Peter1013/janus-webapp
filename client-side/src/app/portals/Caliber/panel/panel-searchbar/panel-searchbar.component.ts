@@ -9,12 +9,20 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 
 // entities
+<<<<<<< HEAD
 import { HydraTrainee } from '../../../../gambit-client/entities/HydraTrainee';
+=======
+import { GambitTrainee } from '../../../../gambit-client/entities/GambitTrainee';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 
 // services
 import { TraineeService } from '../../services/trainee.service';
 import { PanelService } from '../../services/panel.service';
+<<<<<<< HEAD
 import { HydraBatchService } from '../../../../gambit-client/services/batch/hydra-batch.service';
+=======
+import { GambitBatchService } from '../../../../gambit-client/services/batch/gambit-batch.service';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 
 
 @Component({
@@ -25,21 +33,21 @@ import { HydraBatchService } from '../../../../gambit-client/services/batch/hydr
 
 export class PanelSearchbarComponent implements OnInit, OnDestroy {
   name: string;
-  trainee: HydraTrainee;
+  trainee: GambitTrainee;
   batchList;
   traineeList = [];
   traineeNameList: any = [];
   batchSubscription: Subscription;
   closeResult: string;
 
-  protected traineeSubject: BehaviorSubject<HydraTrainee>;
+  protected traineeSubject: BehaviorSubject<GambitTrainee>;
 
   /**
   * Get the necessary services
   * @constructor
   * @param panelService - the PanelService
   */
-  constructor(private traineeService: TraineeService, private batchService: HydraBatchService,
+  constructor(private traineeService: TraineeService, private batchService: GambitBatchService,
     private panelService: PanelService) {
     this.traineeSubject = new BehaviorSubject(this.trainee);
   }
@@ -90,7 +98,7 @@ export class PanelSearchbarComponent implements OnInit, OnDestroy {
    *
    * @param trainee
    */
-  setTrainee(trainee: HydraTrainee) {
+  setTrainee(trainee: GambitTrainee) {
     this.trainee = trainee;
     this.panelService.fetchAllByTrainee(trainee);
     this.traineeSubject.next(this.trainee);
@@ -120,7 +128,7 @@ export class PanelSearchbarComponent implements OnInit, OnDestroy {
    * @function getTraineeSubject
    * Retrieves the trainee currently set as the traineeSubject.
    */
-  public getTraineeSubject(): Observable<HydraTrainee> {
+  public getTraineeSubject(): Observable<GambitTrainee> {
     return this.traineeSubject.asObservable();
   }
 

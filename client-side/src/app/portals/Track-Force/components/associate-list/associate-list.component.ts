@@ -6,7 +6,11 @@ import { RequestService } from '../../services/request-service/request.service';
 import { Client } from '../../models/client.model';
 import { ClientListService } from '../../services/client-list-service/client-list.service';
 import { AutoUnsubscribe } from '../../decorators/auto-unsubscribe.decorator';
+<<<<<<< HEAD
 import { HydraTrainee } from '../../../../gambit-client/entities/HydraTrainee';
+=======
+import { GambitTrainee } from '../../../../gambit-client/entities/GambitTrainee';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 import { User } from '../../models/user.model';
 import { ActivatedRoute } from '@angular/router';
 import { CurriculumService } from '../../services/curriculum-service/curriculum.service';
@@ -27,7 +31,7 @@ import { MarketingStatus } from '../../models/marketing-status.model';
 
 export class AssociateListComponent implements OnInit {
   // our collection of associates and clients
-  associates: HydraTrainee[];
+  associates: GambitTrainee[];
   clients: Client[];
   marketingStatuses: MarketingStatus[];
   curriculums: Set<string>; // stored unique curriculums
@@ -175,7 +179,7 @@ export class AssociateListComponent implements OnInit {
    * Bulk edit feature to update associate's statuses and clients.
    */
   updateAssociates() {
-    const trainees: HydraTrainee[] = [];
+    const trainees: GambitTrainee[] = [];
     const self = this;
 
     for (const trainee of this.associates) { // grab the checked ids

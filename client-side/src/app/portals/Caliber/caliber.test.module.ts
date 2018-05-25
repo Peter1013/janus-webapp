@@ -69,10 +69,17 @@ import { HttpErrorHandlerService } from './settings/screening/services/http-erro
   */
 import { InMemoryDataService } from './services/in-memory-data/in-memory-data.service';
 import { TrainerService } from '../../gambit-client/services/trainer/trainer.service';
+<<<<<<< HEAD
 import { HydraTraineeService } from '../../gambit-client/services/trainee/gambit-trainee.service';
 import { HydraBatchService } from '../../gambit-client/services/batch/hydra-batch.service';
 import { UrlService } from '../../gambit-client/services/urls/url.service';
 import { HydraBatchUtilService } from '../../services/gambit-batch-util.service';
+=======
+import { GambitTraineeService } from '../../gambit-client/services/trainee/gambit-trainee.service';
+import { GambitBatchService } from '../../gambit-client/services/batch/gambit-batch.service';
+import { UrlService } from '../../gambit-client/services/urls/url.service';
+import { GambitBatchUtilService } from '../../services/gambit-batch-util.service';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 
 // N.T.
 import { ApiService } from './util/api.service';
@@ -387,8 +394,8 @@ export const Dependencies = {
     NgbActiveModal,
     { provide: Router, useValue: {} },
     GranularityService,
-    HydraBatchService,
-    HydraBatchUtilService,
+    GambitBatchService,
+    GambitBatchUtilService,
     UrlService,
     CategoryService
   ],

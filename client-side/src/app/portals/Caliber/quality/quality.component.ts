@@ -4,7 +4,11 @@ import { Subscription } from 'rxjs/Subscription';
 
 // pipes
 import { DisplayBatchByYear } from '../pipes/display-batch-by-year.pipe';
+<<<<<<< HEAD
 import { HydraBatch } from '../../../gambit-client/entities/HydraBatch';
+=======
+// import { BatchGambit } from '../../../gambit-client/entities/BatchGambit';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 import { BatchService } from '../../../gambit-client/aggregator/services/completebatch.service';
 import { CompleteBatch } from '../../../gambit-client/aggregator/entities/CompleteBatch';
 
@@ -31,7 +35,7 @@ export class QualityComponent implements OnInit, OnDestroy {
     private batchesByYearPipe: DisplayBatchByYear
   ) {
     this.setCurrentYear( this.getCalendarYear() );
-    this.currentBatch = this.createBatch();
+    this.currentBatch = new CompleteBatch();
   }
 
   ngOnInit() {
@@ -111,34 +115,6 @@ export class QualityComponent implements OnInit, OnDestroy {
       this.currentBatch = selectedBatches[0];
     }
 
-  }
-
-  /**
-  * creates an empty batch instance
-  *
-  * @return Batch
-  */
-  private createBatch(): CompleteBatch {
-
-    return new CompleteBatch();
-  //   return {
-  //     batchId: 0,
-  //     resourceId: 0,
-  //     trainingName: '',
-  //     trainer: null,
-  //     coTrainer: null,
-  //     skillType: '',
-  //     trainingType: '',
-  //     startDate: null,
-  //     endDate: null,
-  //     location: '',
-  //     address: null,
-  //     goodGradeThreshold: 0,
-  //     borderlineGradeThreshold: 0,
-  //     trainees: [],
-  //     weeks: 1,
-  //     gradedWeeks: 1,
-  //   };
   }
 
 }

@@ -6,7 +6,11 @@ import { PDFService } from '../../services/pdf.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { GranularityService } from '../services/granularity.service';
 import { CompleteBatch } from '../../../../gambit-client/aggregator/entities/CompleteBatch';
+<<<<<<< HEAD
 import { HydraTrainee } from '../../../../gambit-client/entities/HydraTrainee';
+=======
+import { GambitTrainee } from '../../../../gambit-client/entities/GambitTrainee';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 /**
  * @author John Hudson
 */
@@ -39,7 +43,7 @@ export class TraineeTechSkillsComponent implements OnInit {
   // current week
   public week: Number = 0;
   // current trainee
-  public trainee: HydraTrainee = new HydraTrainee();
+  public trainee: GambitTrainee = new GambitTrainee();
   // list of trainees (id) that could be displayed
   public traineesList: number[] = [];
   // this is where trainee radar data is stored until it needs to be displayed

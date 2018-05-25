@@ -3,7 +3,11 @@ import { AssociateService } from '../../services/associates-service/associates-s
 import { AuthenticationService } from '../../services/authentication-service/authentication.service';
 import { AutoUnsubscribe } from '../../decorators/auto-unsubscribe.decorator';
 import { ActivatedRoute } from '@angular/router';
+<<<<<<< HEAD
 import { HydraTrainee } from '../../../../gambit-client/entities/HydraTrainee';
+=======
+import { GambitTrainee } from '../../../../gambit-client/entities/GambitTrainee';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 import { ClientListService } from '../../services/client-list-service/client-list.service';
 /**
 * @author Michael Tseng
@@ -18,7 +22,7 @@ import { ClientListService } from '../../services/client-list-service/client-lis
 })
 @AutoUnsubscribe
 export class AssociateViewComponent implements OnInit {
-  public associate: HydraTrainee = new HydraTrainee();
+  public associate: GambitTrainee = new GambitTrainee();
   public interviews: Array<any> = [];
   public messages: Array<string> = ['I cleared my interview with FINRA', 'Please update my status'];
   public newMessage = '';

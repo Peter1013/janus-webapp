@@ -20,7 +20,11 @@ import { NotificationsService } from 'angular2-notifications-lite';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TraineeService } from '../../services/trainee.service';
 import { HttpClient, HttpHandler } from '@angular/common/http';
+<<<<<<< HEAD
 import { HydraBatchService } from '../../../../gambit-client/services/batch/hydra-batch.service';
+=======
+import { GambitBatchService } from '../../../../gambit-client/services/batch/gambit-batch.service';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 import { UrlService } from '../../../../gambit-client/services/urls/url.service';
 import { PanelService } from '../../services/panel.service';
 import { ApiService } from '../../util/api.service';
@@ -61,7 +65,7 @@ describe('PanelComponent', () => {
         TraineeService,
         HttpClient,
         HttpHandler,
-        HydraBatchService,
+        GambitBatchService,
         UrlService,
         PanelService,
         ApiService,

@@ -17,10 +17,17 @@ import { DatePipe } from '@angular/common';
 import { ScrollEvent } from 'ngx-scroll-event';
 import { window } from 'rxjs/operators/window';
 import { HostListener } from '@angular/core/src/metadata/directives';
+<<<<<<< HEAD
 import { HydraBatchService } from '../../../gambit-client/services/batch/hydra-batch.service';
 import { CompleteBatch } from '../../../gambit-client/aggregator/entities/CompleteBatch';
 import { HydraBatchUtilService } from '../../../services/gambit-batch-util.service';
 import { HydraTrainee } from '../../../gambit-client/entities/HydraTrainee';
+=======
+import { GambitBatchService } from '../../../gambit-client/services/batch/gambit-batch.service';
+import { CompleteBatch } from '../../../gambit-client/aggregator/entities/CompleteBatch';
+import { GambitBatchUtilService } from '../../../services/gambit-batch-util.service';
+import { GambitTrainee } from '../../../gambit-client/entities/GambitTrainee';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 import { GambitSkillService } from '../../../gambit-client/services/skill/gambit-skill.service';
 import { GambitSkill } from '../../../gambit-client/entities/GambitSkill';
 
@@ -34,7 +41,7 @@ import { GambitSkill } from '../../../gambit-client/entities/GambitSkill';
 export class AssessComponent implements OnInit {
   assessment: Assessment;
 
-  batches: any[] = []; // this should not be of type any but whoever refactored it to HydraBatch did not do it right - blake
+  batches: any[] = []; // this should not be of type any but whoever refactored it to GambitBatch did not do it right - blake
   assessments: Assessment[] = [];
   selectedBatch: any = new CompleteBatch();
   grades: Grade[] = [];
@@ -51,12 +58,14 @@ export class AssessComponent implements OnInit {
   years: Set<any> = new Set<any>();
   currentYear = 0;
   yearBatches: CompleteBatch[] = [];
-  selectedTrainees: HydraTrainee[] = [];
+  selectedTrainees: GambitTrainee[] = [];
 
   pageOffsetValue;
-  constructor(private modalService: NgbModal, private batchService: HydraBatchService, private assessmentService: AssessmentService,
+
+  constructor(private modalService: NgbModal, private batchService: GambitBatchService, private assessmentService: AssessmentService,
     private gradeService: GradeService, private skillService: GambitSkillService, private noteService: NoteService,
-    private fb: FormBuilder, private datePipe: DatePipe, private batchUtil: HydraBatchUtilService) {}
+    private fb: FormBuilder, private datePipe: DatePipe, private batchUtil: GambitBatchUtilService) {
+    }
 
   getPageOffsetHeight(event: ScrollEvent) {
     this.pageOffsetValue = pageYOffset;
@@ -203,7 +212,7 @@ export class AssessComponent implements OnInit {
                                       GRADES
 *****************************************************************************************/
 
-  updateGrade(trainee: HydraTrainee, assessment: Assessment, input) {
+  updateGrade(trainee: GambitTrainee, assessment: Assessment, input) {
     const grade = this.getGrade(trainee, assessment);
     grade.score = Number(input.value);
     grade.dateReceived = '2000-01-01T01:01:01.000Z';
@@ -211,7 +220,7 @@ export class AssessComponent implements OnInit {
     this.gradeService.update(grade);
   }
 
-  getGrade(trainee: HydraTrainee, assessment: Assessment) {
+  getGrade(trainee: GambitTrainee, assessment: Assessment) {
     const grade = new GradeByTraineeByAssessmentPipe().transform(this.grades, trainee, assessment)[0];
 
     if (grade != null) {
@@ -266,7 +275,7 @@ export class AssessComponent implements OnInit {
                                       NOTES
 *****************************************************************************************/
 
-  getNote(trainee: HydraTrainee) {
+  getNote(trainee: GambitTrainee) {
     let note: Note;
     note = new NoteByTraineeByWeekPipe().transform(this.notes, trainee, this.selectedWeek);
     if (note.content === undefined) {
