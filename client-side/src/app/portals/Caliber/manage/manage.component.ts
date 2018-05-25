@@ -19,7 +19,11 @@ import { TrainingTypeService } from '../services/training-type.service';
 import { GambitSkillService } from '../../../gambit-client/services/skill/gambit-skill.service';
 import { TraineeService } from '../services/trainee.service';
 import { TraineeStatusService } from '../services/trainee-status.service';
+<<<<<<< HEAD
+import { HydraTraineeService } from '../../../gambit-client/services/trainee/gambit-trainee.service';
+=======
 import { GambitTraineeService } from '../../../gambit-client/services/trainee/gambit-trainee.service';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 import { TrainerService } from '../../../gambit-client/services/trainer/trainer.service';
 
 
@@ -27,8 +31,13 @@ import { TrainerService } from '../../../gambit-client/services/trainer/trainer.
 import { Location } from '../entities/Location';
 import { Address } from '../entities/Address';
 import { Trainee } from '../entities/Trainee';
+<<<<<<< HEAD
+import { HydraTrainee } from '../../../gambit-client/entities/HydraTrainee';
+import { HydraTrainer } from '../../../gambit-client/entities/HydraTrainer';
+=======
 import { GambitTrainee } from '../../../gambit-client/entities/GambitTrainee';
 import { GambitTrainer } from '../../../gambit-client/entities/GambitTrainer';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 import { CompleteBatch } from '../../../gambit-client/aggregator/entities/CompleteBatch';
 
 // components

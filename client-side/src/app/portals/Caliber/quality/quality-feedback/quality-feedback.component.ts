@@ -10,10 +10,17 @@ import { QCStatusService } from '../../services/qcstatus.service';
 // entities
 import { Note } from '../../entities/Note';
 import { ReportingService } from '../../services/reporting.service';
+<<<<<<< HEAD
+import { HydraBatch } from '../../../../gambit-client/entities/HydraBatch';
+import { HydraBatchService } from '../../../../gambit-client/services/batch/hydra-batch.service';
+import { HydraBatchUtilService } from '../../../../services/gambit-batch-util.service';
+import { HydraTrainee } from '../../../../gambit-client/entities/HydraTrainee';
+=======
 import { BatchGambit } from '../../../../gambit-client/entities/BatchGambit';
 import { GambitBatchService } from '../../../../gambit-client/services/batch/gambit-batch.service';
 import { GambitBatchUtilService } from '../../../../services/gambit-batch-util.service';
 import { GambitTrainee } from '../../../../gambit-client/entities/GambitTrainee';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 
 
 

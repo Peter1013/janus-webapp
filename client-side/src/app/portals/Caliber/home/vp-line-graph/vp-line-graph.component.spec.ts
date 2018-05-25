@@ -11,7 +11,11 @@ import { VpLineGraphComponent } from './vp-line-graph.component';
 import { ReportingService } from '../../services/reporting.service';
 import { EvaluationService } from '../../services/evaluation.service';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+<<<<<<< HEAD
+import { HydraBatchService } from '../../../../gambit-client/services/batch/hydra-batch.service';
+=======
 import { GambitBatchService } from '../../../../gambit-client/services/batch/gambit-batch.service';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 import { NoteService } from '../../services/note.service';
 
 import { Dependencies } from '../../caliber.test.module';

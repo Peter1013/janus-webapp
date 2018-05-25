@@ -26,11 +26,14 @@ import { UrlUtilService } from '../UrlUtil/url-util.service';
 @Injectable()
 export class BucketService {
 
+<<<<<<< HEAD
+=======
   /**
    * Last Modified by the Avengers to make endpoint more consistent
    * through out application by adding a forward slash to the end
    * of bucket.
    */
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
   private ROOT_URL: string = this.urlUtilService.getBase() + 'bucket/';
   // buckets necessary for conducting screening interview
   // the buckets contained in filteredBuckets are based on the

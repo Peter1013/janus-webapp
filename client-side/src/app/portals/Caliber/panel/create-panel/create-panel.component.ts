@@ -13,7 +13,11 @@ import { PanelSearchbarComponent } from '../panel-searchbar/panel-searchbar.comp
 
 // services
 import { PanelService } from '../../services/panel.service';
+<<<<<<< HEAD
+import { HydraTrainee } from '../../../../gambit-client/entities/HydraTrainee';
+=======
 import { GambitTrainee } from '../../../../gambit-client/entities/GambitTrainee';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 
 @Component({
   selector: 'app-create-panel',

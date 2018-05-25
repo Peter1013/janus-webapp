@@ -34,7 +34,7 @@
     "@ng-bootstrap/ng-bootstrap": "1.0.0-beta.6",
     "@types/jquery": "^3.2.17",
     "angular-font-awesome": "^3.1.2",
-    "angular-in-memory-web-api": "^0.4.5",
+    "angular-in-memory-web-api": "^0.4.6",
     "angular2-notifications-lite": "^0.1.2",
     "bootstrap": "4.0.0-beta.2",
     "chart.js": "^2.7.1",
@@ -89,7 +89,11 @@
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
-    "typescript": "~2.3.3"
+    "typescript": "~2.3.3",
+    "wallaby-webpack": "^3.9.8"
   },
-  "optionalDependencies": {}
+  "optionalDependencies": {
+    "preci:e2e": "webdriver-manager update --versions.chrome=2.29",
+    "ci:e2e": "ng e2e --progress false --config protractor.ci.conf.js --webdriver-update false"
+  }
 }

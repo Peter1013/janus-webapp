@@ -9,12 +9,20 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 
 // entities
+<<<<<<< HEAD
+import { HydraTrainee } from '../../../../gambit-client/entities/HydraTrainee';
+=======
 import { GambitTrainee } from '../../../../gambit-client/entities/GambitTrainee';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 
 // services
 import { TraineeService } from '../../services/trainee.service';
 import { PanelService } from '../../services/panel.service';
+<<<<<<< HEAD
+import { HydraBatchService } from '../../../../gambit-client/services/batch/hydra-batch.service';
+=======
 import { GambitBatchService } from '../../../../gambit-client/services/batch/gambit-batch.service';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 
 
 @Component({

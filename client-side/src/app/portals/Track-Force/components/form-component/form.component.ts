@@ -9,7 +9,11 @@ import { element } from 'protractor';
 import { ActivatedRoute } from '@angular/router';
 import { AutoUnsubscribe } from '../../decorators/auto-unsubscribe.decorator';
 import { RequestService } from '../../services/request-service/request.service';
+<<<<<<< HEAD
+import { HydraTrainee } from '../../../../gambit-client/entities/HydraTrainee';
+=======
 import { GambitTrainee } from '../../../../gambit-client/entities/GambitTrainee';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 import { DataScrollerModule } from 'primeng/primeng';
 import { ENGINE_METHOD_DIGESTS } from 'constants';
 import { AuthenticationService } from '../../services/authentication-service/authentication.service';

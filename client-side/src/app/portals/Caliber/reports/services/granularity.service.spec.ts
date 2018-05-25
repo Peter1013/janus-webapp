@@ -3,13 +3,22 @@ import { TestBed, inject } from '@angular/core/testing';
 import { GranularityService } from './granularity.service';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
+<<<<<<< HEAD
+import { HydraTrainee } from '../../../../gambit-client/entities/HydraTrainee';
+import { HydraBatch } from '../../../../gambit-client/entities/HydraBatch';
+=======
 import { GambitTrainee } from '../../../../gambit-client/entities/GambitTrainee';
 import { GambitBatch } from '../../../../gambit-client/entities/GambitBatch';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 import { Dependencies } from '../../caliber.test.module';
 import { ReplaySubject } from 'rxjs/ReplaySubject';
 import { CompleteBatch } from '../../../../gambit-client/aggregator/entities/CompleteBatch';
 import { GambitSkillType } from '../../../../gambit-client/entities/GambitSkillType';
+<<<<<<< HEAD
+import { HydraTrainer } from '../../../../gambit-client/entities/HydraTrainer';
+=======
 import { GambitTrainer } from '../../../../gambit-client/entities/GambitTrainer';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 
 /**
  * Tested by Mythoua Chang

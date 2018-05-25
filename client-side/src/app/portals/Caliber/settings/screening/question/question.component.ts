@@ -31,6 +31,8 @@ import { AlertsService } from '../../../services/alerts.service';
   ]
 })
 
+<<<<<<< HEAD
+=======
 
   /**
    * Last modified by the Avengers
@@ -46,6 +48,7 @@ import { AlertsService } from '../../../services/alerts.service';
    *
    * Pedro De Los Reyes | 1803-USF-MAR26 | Wezley Singleton
    */
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 export class QuestionComponent implements OnInit {
 
   constructor(private modalService: NgbModal, private fb: FormBuilder,

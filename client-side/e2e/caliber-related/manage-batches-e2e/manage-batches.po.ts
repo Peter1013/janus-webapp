@@ -1,10 +1,12 @@
 import { browser, by, element, ElementHelper } from 'protractor';
-
+import { Var } from '../globalVars';
 export class AppPage {
-  navigateTo() {
-    return browser.get('/');
-  }
 
+  v = new Var();
+
+  navigateTo() {
+    return browser.get(this.v.url());
+  }
   getTitleText() {
     return element(by.css('app-root h2')).getText();
   }
@@ -13,16 +15,65 @@ export class AppPage {
     return element(by.xpath('/html/body/div/app-root/app-janus/app-dashboard/div[2]/div[2]/div[1]/h1')).getText();
   }
 
+  getTrainingName() {
+    return element(by.xpath('//*[@id="manage"]/div[2]/div/table/thead/tr/th[1]')).getText();
+  }
+
+  getTrainingType() {
+    return element(by.xpath('//*[@id="manage"]/div[2]/div/table/thead/tr/th[2]')).getText();
+  }
+
+  getSkillType() {
+    return element(by.xpath('//*[@id="manage"]/div[2]/div/table/thead/tr/th[3]')).getText();
+  }
+
+  getLocation() {
+    return element(by.xpath('//*[@id="manage"]/div[2]/div/table/thead/tr/th[4]')).getText();
+  }
+
+  getStartDate() {
+    return element(by.xpath('//*[@id="manage"]/div[2]/div/table/thead/tr/th[5]')).getText();
+  }
+
+  getEndDate() {
+    return element(by.xpath('//*[@id="manage"]/div[2]/div/table/thead/tr/th[6]')).getText();
+  }
+
+  getGoodGrade() {
+    return element(by.xpath('//*[@id="manage"]/div[2]/div/table/thead/tr/th[7]')).getText();
+  }
+
+  getPassingGrade() {
+    return element(by.xpath('//*[@id="manage"]/div[2]/div/table/thead/tr/th[8]')).getText();
+  }
+
   clickCaliberButton() {
     const e = element(by.xpath('/html/body/div/app-root/app-janus/app-dashboard/div[2]/div[2]/img'));
     e.click();
   }
 
-  clickManageBatches() {
-    // ensure that the navbar is visible by maximizing the browser
-    browser.driver.manage().window().maximize();
-    const e = element(by.css('body > div > app-root > app-janus > app-nav > nav >' +
-    'div.collapse.navbar-collapse > div > app-caliber-nav > ul > li:nth-child(2) > a'));
+  clickAssessBatchesNav() {
+    const e = element(by.xpath('/html/body/div/app-root/app-janus/app-nav/nav/div[2]/div/app-caliber-nav/ul/li[3]'));
+    e.click();
+  }
+
+  clickManageBatchesNav() {
+    const e = element(by.xpath('/html/body/div/app-root/app-janus/app-nav/nav/div[2]/div/app-caliber-nav/ul/li[2]'));
+    e.click();
+  }
+
+  clickQualityAuditNav() {
+    const e = element(by.xpath('/html/body/div/app-root/app-janus/app-nav/nav/div[2]/div/app-caliber-nav/ul/li[4]/a'));
+    e.click();
+  }
+
+  clickImportBatch() {
+    const e = element(by.xpath('//*[@id="manage"]/div[1]/div[2]/button[2]'));
+    e.click();
+  }
+
+  clickCreateBatch() {
+    const e = element(by.xpath('//*[@id="manage"]/div[1]/div[2]/button[1]'));
     e.click();
   }
 }

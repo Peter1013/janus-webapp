@@ -2,7 +2,11 @@ import { Component, OnInit, Inject, Input } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { TrainerService } from '../../../../gambit-client/services/trainer/trainer.service';
+<<<<<<< HEAD
+import { HydraTrainer } from '../../../../gambit-client/entities/HydraTrainer';
+=======
 import { GambitTrainer } from '../../../../gambit-client/entities/GambitTrainer';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 import { NgForm } from '@angular/forms/src/directives/ng_form';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';

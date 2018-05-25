@@ -7,7 +7,11 @@ import { ComponentRef, ElementRef, Renderer2, TemplateRef } from '@angular/core'
 import { NgbModalWindow } from '@ng-bootstrap/ng-bootstrap/modal/modal-window';
 import { ContentRef } from '@ng-bootstrap/ng-bootstrap/util/popup';
 import { NgbModalBackdrop } from '@ng-bootstrap/ng-bootstrap/modal/modal-backdrop';
+<<<<<<< HEAD
+import { HydraTrainee } from '../../../../gambit-client/entities/HydraTrainee';
+=======
 import { GambitTrainee } from '../../../../gambit-client/entities/GambitTrainee';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 import { CompleteBatch } from '../../../../gambit-client/aggregator/entities/CompleteBatch';
 import { User } from '../../../../gambit-client/entities/User';
 import { UserRole } from '../../../../gambit-client/entities/UserRole';

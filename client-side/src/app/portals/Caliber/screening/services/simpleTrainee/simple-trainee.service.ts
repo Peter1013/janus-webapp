@@ -61,7 +61,11 @@ export class SimpleTraineeService {
     const allSimpleTrainees: SimpleTrainee[] = [];
     // Get array of skillTypeIds, apply random skillTypeId's to each new SimpleTrainee
     this.skillTypeService.getSkillTypes().subscribe(allSkillTypes => {
+<<<<<<< HEAD
+      // Get array of HYDRA simpleTrainees, use info to build array of simpleTrainees
+=======
       // Get array of GAMBIT simpleTrainees, use info to build array of simpleTrainees
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
       this.httpClient.get<any[]>(this.ROOT_URL + 'all/trainee/getAll/').subscribe(allCandidates => {
         console.log(allCandidates);
         for (const e of allCandidates) {

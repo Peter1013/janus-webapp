@@ -13,10 +13,17 @@ import { TrainerService } from '../../services/trainer.service';
 import { GranularityService } from '../services/granularity.service';
 import { PDFService } from '../../services/pdf.service';
 import { CompleteBatch } from '../../../../gambit-client/aggregator/entities/CompleteBatch';
+<<<<<<< HEAD
+import { HydraBatchService } from '../../../../gambit-client/services/batch/hydra-batch.service';
+import { HydraBatchUtilService } from '../../../../services/gambit-batch-util.service';
+import { HydraTrainee } from '../../../../gambit-client/entities/HydraTrainee';
+import { HydraTraineeService } from '../../../../gambit-client/services/trainee/gambit-trainee.service';
+=======
 import { GambitBatchService } from '../../../../gambit-client/services/batch/gambit-batch.service';
 import { GambitBatchUtilService } from '../../../../services/gambit-batch-util.service';
 import { GambitTrainee } from '../../../../gambit-client/entities/GambitTrainee';
 import { GambitTraineeService } from '../../../../gambit-client/services/trainee/gambit-trainee.service';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 
 @Component({
   selector: 'app-toolbar',

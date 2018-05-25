@@ -18,7 +18,10 @@ export class ScheduleScreeningService {
 
 /**
  * Returns an observable array of all scheduled screenings for the Candidate Screening List component
+<<<<<<< HEAD
+=======
  *
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
  * Alex Pich | 1803-USF-MAR26 | Wezley Singleton
  *
  * Danny S Chhunn | 1803-USF-MAR26 | Wezley Singleton

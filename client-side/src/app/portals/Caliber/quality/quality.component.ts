@@ -4,7 +4,11 @@ import { Subscription } from 'rxjs/Subscription';
 
 // pipes
 import { DisplayBatchByYear } from '../pipes/display-batch-by-year.pipe';
+<<<<<<< HEAD
+import { HydraBatch } from '../../../gambit-client/entities/HydraBatch';
+=======
 // import { BatchGambit } from '../../../gambit-client/entities/BatchGambit';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 import { BatchService } from '../../../gambit-client/aggregator/services/completebatch.service';
 import { CompleteBatch } from '../../../gambit-client/aggregator/entities/CompleteBatch';
 

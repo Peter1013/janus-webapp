@@ -2,7 +2,7 @@
 import { RouterModule, Router, ActivatedRoute } from '@angular/router';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -15,6 +15,7 @@ import { SimpleNotificationsModule } from 'angular2-notifications-lite';
 import { ScrollEventModule } from 'ngx-scroll-event';
 import { NgxPaginationModule, PaginatePipe } from 'ngx-pagination';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // routing
 import { routes } from './caliber.routes';
@@ -66,13 +67,19 @@ import { HttpErrorHandlerService } from './settings/screening/services/http-erro
 /** for in memory data service
   * executed, 'npm i angular-in-memory-web-api --save', remove from packange.json if not in use.
   */
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data/in-memory-data.service';
 import { TrainerService } from '../../gambit-client/services/trainer/trainer.service';
+<<<<<<< HEAD
+import { HydraTraineeService } from '../../gambit-client/services/trainee/gambit-trainee.service';
+import { HydraBatchService } from '../../gambit-client/services/batch/hydra-batch.service';
+import { UrlService } from '../../gambit-client/services/urls/url.service';
+import { HydraBatchUtilService } from '../../services/gambit-batch-util.service';
+=======
 import { GambitTraineeService } from '../../gambit-client/services/trainee/gambit-trainee.service';
 import { GambitBatchService } from '../../gambit-client/services/batch/gambit-batch.service';
 import { UrlService } from '../../gambit-client/services/urls/url.service';
 import { GambitBatchUtilService } from '../../services/gambit-batch-util.service';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 
 // N.T.
 import { ApiService } from './util/api.service';
@@ -151,6 +158,7 @@ import { DeleteBatchModalComponent } from './manage/delete-batch-modal/delete-ba
 import { CannotDeleteModalComponent } from './manage/cannot-delete-modal/cannot-delete-modal.component';
 import { DeleteTraineeModalComponent } from './manage/delete-trainee-modal/delete-trainee-modal.component';
 import { CannotDeleteTraineeModalComponent } from './manage/cannot-delete-trainee-modal/cannot-delete-trainee-modal.component';
+
 import { FinalReportComponent } from './screening/components/final-report/final-report.component';
 import { IntroductionComponent } from './screening/components/introduction/introduction.component';
 import { AnswerComponent } from './screening/components/answer/answer.component';
@@ -169,6 +177,7 @@ import { ReportingService } from './services/reporting.service';
 import { CategoryService } from './services/category/category.service';
 import { NgbModalStack } from '@ng-bootstrap/ng-bootstrap/modal/modal-stack';
 
+
 export const Dependencies = {
   imports: [
     CommonModule,
@@ -181,6 +190,7 @@ export const Dependencies = {
     ReactiveFormsModule,
     SimpleNotificationsModule.forRoot(),
     NgxPaginationModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     // pipes
@@ -346,7 +356,10 @@ export const Dependencies = {
     BucketService,
     UrlUtilService,
     QuestionService,
+    QuestionsService,
+    BucketsService,
     TagService,
+    TagsService,
     SimpleTraineeService,
     SkillTypeService,
     QuestionScoreService,

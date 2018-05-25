@@ -6,12 +6,17 @@ const { SpecReporter } = require('jasmine-spec-reporter');
 exports.config = {
   allScriptsTimeout: 11000,
   specs: [
+    './e2e/caliber-related/assess-batches/assess-batches.e2e-spec.ts',
     './e2e/caliber-related/manage-batches-e2e/manage-batches.e2e-spec.ts',
+    './e2e/caliber-related/panel-e2e/panel.e2e-spec.ts',
+    './e2e/caliber-related/quality-audit/quality-audit.e2e-spec.ts',
+    './e2e/caliber-related/reports/reports.e2e-spec.ts',
+    './e2e/caliber-related/screening/screening.e2e-spec.ts'
   ],
   capabilities: {
     'browserName': 'chrome',
     chromeOptions: {
-      args: [ "--headless", "--disable-gpu", "--window-size=800x600" ]
+      args: [ "--headless", "--disable-gpu", "--window-size=1000x573" ]
     }
   },
   directConnect: true,

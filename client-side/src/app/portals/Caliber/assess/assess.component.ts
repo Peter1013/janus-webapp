@@ -17,10 +17,17 @@ import { DatePipe } from '@angular/common';
 import { ScrollEvent } from 'ngx-scroll-event';
 import { window } from 'rxjs/operators/window';
 import { HostListener } from '@angular/core/src/metadata/directives';
+<<<<<<< HEAD
+import { HydraBatchService } from '../../../gambit-client/services/batch/hydra-batch.service';
+import { CompleteBatch } from '../../../gambit-client/aggregator/entities/CompleteBatch';
+import { HydraBatchUtilService } from '../../../services/gambit-batch-util.service';
+import { HydraTrainee } from '../../../gambit-client/entities/HydraTrainee';
+=======
 import { GambitBatchService } from '../../../gambit-client/services/batch/gambit-batch.service';
 import { CompleteBatch } from '../../../gambit-client/aggregator/entities/CompleteBatch';
 import { GambitBatchUtilService } from '../../../services/gambit-batch-util.service';
 import { GambitTrainee } from '../../../gambit-client/entities/GambitTrainee';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 import { GambitSkillService } from '../../../gambit-client/services/skill/gambit-skill.service';
 import { GambitSkill } from '../../../gambit-client/entities/GambitSkill';
 

@@ -13,7 +13,11 @@ import { GranularityService } from '../services/granularity.service';
 import { ReportingService } from '../../services/reporting.service';
 import { NoteService } from '../../services/note.service';
 import { CompleteBatch } from '../../../../gambit-client/aggregator/entities/CompleteBatch';
+<<<<<<< HEAD
+import { HydraTrainee } from '../../../../gambit-client/entities/HydraTrainee';
+=======
 import { GambitTrainee } from '../../../../gambit-client/entities/GambitTrainee';
+>>>>>>> 8badc09e6717c61cf339c7db8217d5ce1e3a9aef
 
 /**
  * Creates a table of the weekly feedback of a given trainee
