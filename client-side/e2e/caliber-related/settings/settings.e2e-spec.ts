@@ -1,3 +1,7 @@
+/**
+ * @author Bryce Charydczak | 1803-USF-MAR26 | Wezley Singleton
+ */
+
 import { AppPage } from './settings.po';
 import { browser, element, by} from 'protractor';
 
@@ -18,5 +22,5 @@ describe('test-app Settings', () => {
     page.clickCaliberButton();
     expect(browser.getCurrentUrl()).toContain(baseUrl + 'Caliber/home');
   });
-  
+
 });

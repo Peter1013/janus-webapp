@@ -1,3 +1,7 @@
+/**
+ * @author Bryce Charydczak | 1803-USF-MAR26 | Wezley Singleton
+ */
+
 import { browser, by, element } from 'protractor';
 import { Var } from '../globalVars';
 export class PanelPage {
