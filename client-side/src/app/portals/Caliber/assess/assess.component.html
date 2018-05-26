@@ -1,6 +1,8 @@
 <!-- TABS **START** -->
 <div class="container pad-container f-size">
   <div class="row">
+
+
     <div class="col col-xs-5">
       <div ngbDropdown class="d-inline-block">
         <button class="btn btn-secondary btn-custom b-top-radius f-size" id="dropdownBasic1" ngbDropdownToggle>
@@ -14,7 +16,13 @@
           </div>
         </div>
       </div>
-      <div ngbDropdown class="d-inline-block">
+
+      <!--fixed broken navbar error
+      
+      Must resolve trainer value before attempting to make calls to it.
+      
+      -->
+      <div *ngIf="selectedBatch.trainer" ngbDropdown class="d-inline-block">
         <button class="btn btn-secondary btn-custom b-top-radius f-size" id="dropdownBasic2" ngbDropdownToggle>
           <strong>{{selectedBatch.trainer.firstname}} - {{selectedBatch.startDate | date: 'shortDate'}}</strong>
         </button>
@@ -26,7 +34,10 @@
           </div>
         </div>
       </div>
+
     </div>
+
+    
     <div class="col col-xs-7 rightHeaderTab">
       <button class="btn btn-secondary b-top-radius f-size" (click)="open(addAssessmentContent)">
         <strong>Create Assessment
@@ -34,6 +45,8 @@
         </strong>
       </button>
     </div>
+
+
   </div>
 
   <hr class="shift-hr" style="width: 100%">

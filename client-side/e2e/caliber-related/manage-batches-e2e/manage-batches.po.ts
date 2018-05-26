@@ -1,4 +1,4 @@
-import { browser, by, element, ElementHelper } from 'protractor';
+import { browser, by, element, ElementHelper, protractor } from 'protractor';
 
 export class AppPage {
   navigateTo() {
@@ -20,9 +20,16 @@ export class AppPage {
 
   clickManageBatches() {
     // ensure that the navbar is visible by maximizing the browser
+    //but why tho...
     browser.driver.manage().window().maximize();
-    const e = element(by.css('body > div > app-root > app-janus > app-nav > nav >' +
-    'div.collapse.navbar-collapse > div > app-caliber-nav > ul > li:nth-child(2) > a'));
-    e.click();
+
+    let EC = protractor.ExpectedConditions;
+    browser.waitForAngular();
+    let d = element(by.xpath('/html/body/div/app-root/app-janus/app-nav/nav/div[2]/div/app-caliber-nav/ul/li[2]/a'));
+ //   const e = element(by.id('test-me'));
+
+    d.click();     
+
+    
   }
 }

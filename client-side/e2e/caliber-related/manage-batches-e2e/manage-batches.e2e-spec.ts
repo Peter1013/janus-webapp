@@ -21,10 +21,14 @@ describe('test-app Batch Management', () => {
   it('should click Caliber button and go to Caliber home page', () => {
     page.clickCaliberButton();
     expect(browser.getCurrentUrl()).toContain(baseUrl + 'Caliber/home');
+
+    
   });
 
   it('should click Manage Batches button and go to Batch overview page', () => {
+
     page.clickManageBatches();
     expect(browser.getCurrentUrl()).toContain(baseUrl + 'Caliber/manage');
+
   });
 });

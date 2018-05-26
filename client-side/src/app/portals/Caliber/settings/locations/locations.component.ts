@@ -14,7 +14,7 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 export class LocationsComponent implements OnInit, OnDestroy, OnChanges {
 
   private locationSubscription: Subscription;
-  locations: Location[];
+  locations: Location[] = new Array();
   currEditLocation: Location;
 
   constructor(private locationService: LocationService,
@@ -26,7 +26,9 @@ export class LocationsComponent implements OnInit, OnDestroy, OnChanges {
   ngOnInit() {
     this.locationService.getAllLocations().subscribe((resp) => {
       this.locations = resp;
+     
     });
+    console.log("we have"+this.locations);
   }
 
   ngOnChanges(changes: SimpleChanges): void {

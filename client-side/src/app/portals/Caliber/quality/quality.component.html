@@ -24,7 +24,7 @@
                         </div>
                     </div>
 
-                    <div ngbDropdown class="d-inline-block mr-2">
+                    <div *ngIf="getBatchesOfCurrentYear" ngbDropdown class="d-inline-block mr-2">
 
                         <!-- <select name="batchSelect" #batchSelect *ngIf="getBatchesOfCurrentYear().length > 0" (change)="onBatchSelect(batchSelect.value)"
                             class="btn btn-custom btn-secondary b-top-radius custom-bold mr-3">
@@ -59,7 +59,7 @@
     </div>
 
     <div class="row mt-3">
-        <div class="col">
+        <div *ngIf="currentBatch.trainees" class="col">
             <app-quality-feedback *ngIf="currentBatch.trainees.length > 0" [batch]="currentBatch"></app-quality-feedback>
         </div>
     </div>
