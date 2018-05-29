@@ -3,10 +3,10 @@
  */
 
 import { browser, by, element, ElementHelper } from 'protractor';
-import { Var } from '../globalVars';
+import { GlobalVars } from '../../globalVars';
 export class AppPage {
 
-  v = new Var();
+  v = new GlobalVars();
 
   navigateTo() {
     return browser.get(this.v.url());

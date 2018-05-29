@@ -36,5 +36,4 @@ describe('test-app Assess Batches', () => {
     expect(page.getWeeklyBatchText()).toContain('Weekly Batch Average:');
   });
 
-  
 });
