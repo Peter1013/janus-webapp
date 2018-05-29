@@ -1,15 +1,15 @@
 /**
  * @author Bryce Charydczak | 1803-USF-MAR26 | Wezley Singleton
+ * @author Dennis Park | 1803-USF-MAR26 | Wezley Singleton
  */
 
 import { browser, by, element } from 'protractor';
-import { Var } from '../globalVars';
+import { GlobalVars } from '../../globalVars';
 export class PanelPage {
 
-  v = new Var();
+  v = new GlobalVars();
 
   navigateTo() {
-    return browser.get(this.v.url());
   }
 
   getCreatePanelButton() {
